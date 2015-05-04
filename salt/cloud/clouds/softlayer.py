@@ -532,6 +532,8 @@ def create(vm_):
             'name': vm_['name'],
             'profile': vm_['profile'],
             'provider': vm_['provider'],
+            'public_ip': response.get('public_ip'),
+            'fullyQualifiedDomainName': response.get('fullyQualifiedDomainName')
         },
         transport=__opts__['transport']
     )
